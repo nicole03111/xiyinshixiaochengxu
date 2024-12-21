@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="zh"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Composer Nationality Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .composer-list {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 0;
+      list-style: none;
+    }
+    .composer-list li {
+      background: #fff;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .composer-list li:hover {
+      background: #e0f7fa;
+    }
+    .details {
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Composer Nationality Quiz</h1>
+  <p style="text-align: center;">点击作曲家的名字以查看他们的国籍和代表作品！</p>
+  <ul class="composer-list">
+    <li onclick="showDetails(this, '意大利', '小提琴协奏曲')">维瓦尔第</li>
+    <li onclick="showDetails(this, '德国', '马太受难曲、约翰受难曲、十二平均律钢琴曲、勃兰登堡协奏曲')">巴赫</li>
+    <li onclick="showDetails(this, '德裔英', '清唱剧《弥赛亚》、水上音乐组曲')">亨德尔</li>
+    <li onclick="showDetails(this, '奥地利', '94 G大调惊愕交响曲、C大调皇帝弦乐四重奏')">海顿</li>
+    <li onclick="showDetails(this, '奥地利', '歌剧《费加罗的婚礼》、《魔笛》')">莫扎特</li>
+    <li onclick="showDetails(this, '德国', '降E大调第三英雄交响曲、C大调第五命运交响曲等')">贝多芬</li>
+    <li onclick="showDetails(this, '奥地利', '艺术歌曲《鳟鱼》、《魔王》、《菩提树》')">舒伯特</li>
+    <li onclick="showDetails(this, '德国', '无词歌（春之歌、威尼斯船歌等）')">门德尔松</li>
+    <li onclick="showDetails(this, '德国', '钢琴组曲《童年情景》')">舒曼</li>
+    <li onclick="showDetails(this, '德国', '匈牙利舞曲')">勃拉姆斯</li>
+    <li onclick="showDetails(this, '法国', '幻想交响曲')">柏辽兹</li>
+    <li onclick="showDetails(this, '波兰', 'c小调革命练习曲、波罗涅兹舞曲')">肖邦</li>
+    <li onclick="showDetails(this, '匈牙利', '匈牙利狂想曲')">李斯特</li>
+    <li onclick="showDetails(this, '俄罗斯', '歌剧《为沙皇献身》、《卡玛琳斯卡亚幻想曲》')">格林卡</li>
+    <li onclick="showDetails(this, '俄罗斯', '在中亚西亚草原')">鲍罗丁</li>
+    <li onclick="showDetails(this, '俄罗斯', '图画展览会')">穆索尔斯基</li>
+    <li onclick="showDetails(this, '俄罗斯', '野蜂飞舞、天方夜谭')">里姆斯基-科萨科夫</li>
+    <li onclick="showDetails(this, '捷克', '《我的祖国》中的沃尔塔瓦河')">斯美塔那</li>
+    <li onclick="showDetails(this, '捷克', '美国弦乐四重奏、《自新大陆交响曲》')">德沃夏克</li>
+    <li onclick="showDetails(this, '挪威', '培尔金特组曲')">格里格</li>
+    <li onclick="showDetails(this, '芬兰', '芬兰颂')">西贝柳斯</li>
+    <li onclick="showDetails(this, '法国', '动物狂想曲、《天鹅》')">圣-桑</li>
+    <li onclick="showDetails(this, '法国', '钢琴曲《月光》、《亚麻色头发的少女》、《牧神午后》')">德彪西</li>
+    <li onclick="showDetails(this, '法国', '包莱罗舞曲')">拉威尔</li>
+    <li onclick="showDetails(this, '意大利', '歌剧《塞维利亚理发师》')">罗西尼</li>
+    <li onclick="showDetails(this, '意大利', '歌剧《茶花女》、《弄臣》、《阿伊达》')">威尔第</li>
+    <li onclick="showDetails(this, '意大利', '歌剧《图兰朵》、《蝴蝶夫人》、《托斯卡》、《艺术家生涯》')">普契尼</li>
+    <li onclick="showDetails(this, '德裔美', '《春之祭》')">斯特拉文斯基</li>
+  </ul>
+
+  <script>
+    function showDetails(element, nationality, works) {
+      const details = element.querySelector('.details');
+      if (!details) {
+        const detailsDiv = document.createElement('div');
+        detailsDiv.className = 'details';
+        detailsDiv.textContent = `国籍: ${nationality} | 代表作品: ${works}`;
+        element.appendChild(detailsDiv);
+      } else {
+        element.removeChild(details);
+      }
+    }
+  </script>
+
+
+</body></html>
